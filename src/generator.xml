@@ -7,7 +7,7 @@
 		2.可以引用环境变量: ${env.JAVA_HOME} or System.properties: ${user.home},property之间也可以相互引用
 	</comment>
 	
-	<entry key="basepackage">com.tq.home.list</entry>
+	<entry key="basepackage">com.tq.management.base.system</entry>
 	
 	<entry key="bussinessName">自动上架配置表</entry>
 	
@@ -17,10 +17,10 @@
 	<entry key="outRoot">.\generator-output</entry>
 
 	<!-- 需要移除的表名前缀,使用逗号进行分隔多个前缀,示例值: t_,v_ -->
-	<entry key="tableRemovePrefixes">cms_</entry>
+	<entry key="tableRemovePrefixes">sys_</entry>
 	
-	<entry key="jdbc.username">develop</entry>
-	<entry key="jdbc.password">123456</entry>
+	<entry key="jdbc.username">root</entry>
+	<entry key="jdbc.password">root</entry>
 		
 	<!-- oracle需要指定jdbc.schema,其它数据库忽略此项配置  -->
 	<entry key="jdbc.schema"></entry>
@@ -40,7 +40,7 @@
 	-->
 	
 	<!-- Mysql -->
-	<entry key="jdbc.url">jdbc:mysql://localhost:3306/shop_helper?useUnicode=true&amp;characterEncoding=UTF-8</entry>
+	<entry key="jdbc.url">jdbc:mysql://localhost:3306/xmanager?useUnicode=true&amp;characterEncoding=UTF-8</entry>
 	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
 
 	<!-- Oracle 	jdbc:oracle:oci:@tnsname_devdb

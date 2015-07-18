@@ -1,6 +1,5 @@
 /*
- * 文 件 名:  ${table.className}.java
- * 创 建 人:  tangqian
- * 创建时间:  <#if now??>${now?string('yyyy-MM-dd')}</#if>
+ * Copyright(c) 2015 gvtv.com.cn All rights reserved.
+ * distributed with this file and available online at
+ * http://www.gvtv.com.cn/
  */
-

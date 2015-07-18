@@ -22,7 +22,7 @@
 
 </#macro>
 
-<#assign excludeColunmStr = ",id,code,version,status,created_by,created_date,last_updated_by,last_updated_date,">
+<#assign excludeColunmStr = ",id,status,creator,modifier,create_time,modify_time,">
 
 <#macro generateBycondition columnSqlName>
 	<#assign compareName = "," + columnSqlName + ",">
