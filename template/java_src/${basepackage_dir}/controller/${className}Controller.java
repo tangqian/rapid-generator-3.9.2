@@ -43,6 +43,7 @@ public class ${className}Controller extends BaseController {
     
 	@RequestMapping
 	public ModelAndView page() {
+		${shortName}
 		return new ModelAndView(LIST);
 	}
 	

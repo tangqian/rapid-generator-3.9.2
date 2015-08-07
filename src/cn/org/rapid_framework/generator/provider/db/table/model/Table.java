@@ -334,7 +334,7 @@ public class Table {
 	}
 	
 	public String getShortName() {
-        return sqlName.replace("cms_", "");
+        return removeTableSqlNamePrefix(sqlName);
     }
 	
 	public String toString() {
