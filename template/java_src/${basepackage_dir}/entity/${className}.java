@@ -4,22 +4,23 @@
 <#assign classNameLower = className?uncap_first> 
 package ${basepackage}.entity;
 
-import java.io.Serializable;
-import com.tq.management.base.entity.SuperEntity;
+import com.thinkgem.jeesite.modules.base.persistence.ExDataEntity;
 
 /**
  * @version 1.0
  * @author tangqian
  */
-public class ${className} extends SuperEntity implements Serializable {
+public class ${className} extends ExDataEntity<${className}> {
 
-<@generateJavaColumns/>
+	private static final long serialVersionUID = 1L;
 	<#list table.columns as column>
 	<@generateBycondition column.sqlName>
 	
 	private ${column.simpleJavaType} ${column.columnNameLower};
 	</@generateBycondition>
 	</#list>
+
+<@generateJavaColumns/>
 }
 <#macro generateJavaColumns>
 	<#list table.columns as column>
