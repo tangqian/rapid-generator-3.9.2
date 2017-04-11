@@ -46,7 +46,7 @@ public class DatabaseDataTypesUtils {
 		return false;
 	}
 	
-	public static String getPreferredJavaType(int sqlType, int size,
+	public static String getPreferredJavaType(int sqlType, String sqlTypeName, int size,
 			int decimalDigits) {
 		if ((sqlType == Types.DECIMAL || sqlType == Types.NUMERIC)
 				&& decimalDigits == 0) {
@@ -65,6 +65,10 @@ public class DatabaseDataTypesUtils {
 				return "java.math.BigDecimal";
 			}
 		}
+        if(sqlType == Types.INTEGER  && sqlTypeName.contains("unsigned")){
+            return "java.lang.Long";
+        }
+
 		String result = _preferredJavaTypeForSqlType.getString(sqlType);
 		if (result == null) {
 			result = "java.lang.Object";

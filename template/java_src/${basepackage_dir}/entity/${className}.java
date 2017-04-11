@@ -1,15 +1,11 @@
 <#include "/macro.include"/>
-<#include "/java_copyright.include">
 <#assign className = table.className>   
 <#assign classNameLower = className?uncap_first> 
 package ${basepackage}.entity;
 
 import com.thinkgem.jeesite.modules.base.persistence.ExDataEntity;
+import java.util.Date;
 
-/**
- * @version 1.0
- * @author tangqian
- */
 public class ${className} extends ExDataEntity<${className}> {
 
 	private static final long serialVersionUID = 1L;
