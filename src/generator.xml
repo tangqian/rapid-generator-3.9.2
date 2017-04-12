@@ -2,40 +2,38 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 	<comment>
-		‰ª£Á†ÅÁîüÊàêÂô®ÈÖçÁΩÆÊñá‰ª∂: 
-		1.‰ºö‰∏∫ÊâÄÊúâÁöÑpropertyÁîüÊàêproperty_dirÂ±ûÊÄß,Â¶Çpkg=com.company => pkg_dir=com/company
-		2.ÂèØ‰ª•ÂºïÁî®ÁéØÂ¢ÉÂèòÈáè: ${env.JAVA_HOME} or System.properties: ${user.home},property‰πãÈó¥‰πüÂèØ‰ª•Áõ∏‰∫íÂºïÁî®
+		¥˙¬Î…˙≥…∆˜≈‰÷√Œƒº˛: 
+		1.ª·Œ™À˘”–µƒproperty…˙≥…property_dir Ù–‘,»Ápkg=com.company => pkg_dir=com/company
+		2.ø…“‘“˝”√ª∑æ≥±‰¡ø: ${env.JAVA_HOME} or System.properties: ${user.home},property÷Æº‰“≤ø…“‘œ‡ª•“˝”√
 	</comment>
 	
-	<!-- Ë°®Á§∫ÁîüÊàêÁöÑjavaÊ∫êÊñá‰ª∂ÊâÄÂú®ÁöÑÂåÖË∑ØÂæÑÔºåÂèØÂú®Ê®°Êùø‰∏≠ÂºïÁî®ËØ•ÂèòÈáèÔºåËØ∑Áúãtemplate/java_src‰∏ãÁöÑ${basepackage_dir},Â§ö‰∫Ü_dirË°®Á§∫Â∞Ü.Êç¢Êàê/‰ª£Ë°®Â§öÁ∫ßÁõÆÂΩï -->
-	<entry key="basepackage">com.thinkgem.jeesite.modules.base</entry>
+	<!-- ±Ì æ…˙≥…µƒjava‘¥Œƒº˛À˘‘⁄µƒ∞¸¬∑æ∂£¨ø…‘⁄ƒ£∞Â÷–“˝”√∏√±‰¡ø£¨«Îø¥template/java_srcœ¬µƒ${basepackage_dir},∂‡¡À_dir±Ì æΩ´.ªª≥…/¥˙±Ì∂‡º∂ƒø¬º -->
+	<entry key="basepackage">com.yeahka.dubbo.merchant.provider.modules.merchant</entry>
 	
-	<!-- Ëá™ÂÆö‰πâÂèòÈáèÔºåÂèØËÆæÁΩÆÂ§ö‰∏™‰ª•Ë¢´ÂÖ∂ÂÆÉÊ®°Êùø‰∏≠ÂºïÁî®„ÄÇ‰æãÂ¶ÇÂØπÁî®Êà∑Ë°®ËøõË°å‰ª£Á†ÅÁîüÊàêÊó∂ÔºåÂèØ‰ª•ËÆæÁΩÆ‰∏∫Áî®Êà∑ÔºåËøôÊ†∑Âú®Êñ∞Â¢ûÊàñÁºñËæëÈ°µÈù¢Êó∂ÂèØÂºïÁî®ËØ•ÂèòÈáè-->
-	<entry key="bussinessName">Êñá‰ª∂</entry>
+	<!-- ◊‘∂®“Â±‰¡ø£¨ø……Ë÷√∂‡∏ˆ“‘±ª∆‰À¸ƒ£∞Â÷–“˝”√°£¿˝»Á∂‘”√ªß±ÌΩ¯––¥˙¬Î…˙≥… ±£¨ø…“‘…Ë÷√Œ™”√ªß£¨’‚—˘‘⁄–¬‘ˆªÚ±‡º≠“≥√Ê ±ø…“˝”√∏√±‰¡ø-->
+	<entry key="bussinessName">Œƒº˛</entry>
 	
 	<!-- jsp namespace: web/${namespace}/${className}/list.jsp -->
 	<entry key="namespace">pages</entry>
 	
-	<!-- Ëá™Âä®ÁîüÊàêÁöÑ‰ª£Á†ÅÂ≠òÊîæË∑ØÂæÑ-->
+	<!-- ◊‘∂Ø…˙≥…µƒ¥˙¬Î¥Ê∑≈¬∑æ∂-->
 	<entry key="outRoot">.\generator-output</entry>
 
-	<!-- ÈúÄË¶ÅÁßªÈô§ÁöÑË°®ÂêçÂâçÁºÄ,‰ΩøÁî®ÈÄóÂè∑ËøõË°åÂàÜÈöîÂ§ö‰∏™ÂâçÁºÄ,Á§∫‰æãÂÄº: t_,v_ -->
-	<entry key="tableRemovePrefixes">EXH_</entry>
+	<!-- –Ë“™“∆≥˝µƒ±Ì√˚«∞◊∫, π”√∂∫∫≈Ω¯––∑÷∏Ù∂‡∏ˆ«∞◊∫, æ¿˝÷µ: t_,v_ -->
+	<entry key="tableRemovePrefixes">t_</entry>
 	
 	<entry key="jdbc.username">root</entry>
-	<entry key="jdbc.password">123456</entry>
+	<entry key="jdbc.password">1234</entry>
 		
-	<!-- oracleÈúÄË¶ÅÊåáÂÆöjdbc.schema,ÂÖ∂ÂÆÉÊï∞ÊçÆÂ∫ìÂøΩÁï•Ê≠§È°πÈÖçÁΩÆ  -->
+	<!-- oracle–Ë“™÷∏∂®jdbc.schema,∆‰À¸ ˝æ›ø‚∫ˆ¬‘¥ÀœÓ≈‰÷√  -->
 	<entry key="jdbc.schema"></entry>
 	<entry key="jdbc.catalog"></entry>
 	
-	<!-- Êï∞ÊçÆÂ∫ìÁ±ªÂûãÊò†Â∞Ñ  -->
-	<entry key="java_typemapping.java.sql.Timestamp">java.util.Date</entry>
-	<entry key="java_typemapping.java.sql.Date">java.util.Date</entry>
-	<entry key="java_typemapping.java.sql.Time">java.util.Date</entry>	
-	<entry key="java_typemapping.java.lang.Byte">Integer</entry>
-	<entry key="java_typemapping.java.lang.Short">Integer</entry>
-	<entry key="java_typemapping.java.math.BigDecimal">Long</entry>
+	<!--  ˝æ›ø‚¿‡–Õ”≥…‰  -->
+	<entry key="java_typemapping.java.sql.Timestamp">Date</entry>
+	<entry key="java_typemapping.java.sql.Date">Date</entry>
+    <entry key="java_typemapping.java.lang.Byte">Integer</entry>
+    <entry key="java_typemapping.java.lang.Short">Integer</entry>
 
 	<!-- H2 -->
 	<!--<entry key="jdbc.url">jdbc:h2:tcp://localhost/test</entry>
@@ -43,7 +41,7 @@
 	-->
 	
 	<!-- Mysql -->
-	<entry key="jdbc.url">jdbc:mysql://192.168.2.229:3306/exhibition_new?useUnicode=true&amp;characterEncoding=UTF-8</entry>
+	<entry key="jdbc.url">jdbc:mysql://127.0.0.1/test0?useUnicode=true&amp;characterEncoding=UTF-8</entry>
 	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
 
 	<!-- Oracle 	jdbc:oracle:oci:@tnsname_devdb
