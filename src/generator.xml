@@ -8,7 +8,7 @@
 	</comment>
 	
 	<!-- 表示生成的java源文件所在的包路径，可在模板中引用该变量，请看template/java_src下的${basepackage_dir},多了_dir表示将.换成/代表多级目录 -->
-	<entry key="basepackage">com.yeahka.dubbo.merchant.provider.modules.merchant</entry>
+	<entry key="basepackage">com.yeahka.pay.unionscan.modules.merchant</entry>
 	
 	<!-- 自定义变量，可设置多个以被其它模板中引用。例如对用户表进行代码生成时，可以设置为用户，这样在新增或编辑页面时可引用该变量-->
 	<entry key="bussinessName">文件</entry>
@@ -41,7 +41,7 @@
 	-->
 	
 	<!-- Mysql -->
-	<entry key="jdbc.url">jdbc:mysql://127.0.0.1/test0?useUnicode=true&amp;characterEncoding=UTF-8</entry>
+	<entry key="jdbc.url">jdbc:mysql://127.0.0.1/lepos?useUnicode=true&amp;characterEncoding=UTF-8</entry>
 	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
 
 	<!-- Oracle 	jdbc:oracle:oci:@tnsname_devdb

@@ -129,7 +129,7 @@ public class StringHelper {
 		String preStr = "";
 		for(int i = 0; i < strs.length; i++) {
 			if(preStr.length() == 1) {
-				result += strs[i];
+				result += capitalize(strs[i]);
 			}else {
 				result += capitalize(strs[i]);
 			}

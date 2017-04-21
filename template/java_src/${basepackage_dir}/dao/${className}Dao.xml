@@ -10,16 +10,29 @@
         select
             *
         from ${table.sqlName}
-        where <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnNameFirstLower}"/><#if column_has_next>, </#if></#list>
+        where <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnName}"/><#if column_has_next>, </#if></#list>
     </select>
 
-    <select id="findList" resultType="${className}">
+    <select id="getBy" resultType="${className}">
         select
             *
         from ${table.sqlName}
         where 1 = 1
-        <if test="name != null and name != ''">
-            and	IFNULL(name,'') like CONCAT('%', <@mapperEl "name"/>, '%')
+        <if test="FId != null">
+            and F_id = <@mapperEl "FId"/>
+        </if>
+        <if test="FName != null and FName != ''">
+            and F_name = <@mapperEl "FName"/>
+        </if>
+    </select>
+
+    <select id="list" resultType="${className}">
+        select
+            *
+        from ${table.sqlName}
+        where 1 = 1
+        <if test="FName != null and FName != ''">
+            and	IFNULL(F_name,'') like CONCAT('%', <@mapperEl "FName"/>, '%')
         </if>
     </select>
 
@@ -30,7 +43,7 @@
         </#list>
         ) values (
         <#list table.columns as column>
-            <@mapperEl column.columnNameFirstLower/><#if column_has_next>,</#if>
+            <@mapperEl column.columnName/><#if column_has_next>,</#if>
         </#list>
         )
     </insert>
@@ -39,16 +52,16 @@
         update ${table.sqlName}
         <set>
             <#list table.notPkColumns as column>
-            <if test="${column.columnNameFirstLower} != null">${column.sqlName} = <@mapperEl column.columnNameFirstLower/>,</if>
+            <if test="${column.columnName} != null">${column.sqlName} = <@mapperEl column.columnName/>,</if>
             </#list>
         </set>
         where
-            <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnNameFirstLower}"/><#if column_has_next>, </#if></#list>
+            <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnName}"/><#if column_has_next>, </#if></#list>
     </update>
 
     <update id="delete">
         delete from ${table.sqlName}
-        where <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnNameFirstLower}"/><#if column_has_next>, </#if></#list>
+        where <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnName}"/><#if column_has_next>, </#if></#list>
     </update>
 
 </mapper>

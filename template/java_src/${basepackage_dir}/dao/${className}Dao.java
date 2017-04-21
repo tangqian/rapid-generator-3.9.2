@@ -3,15 +3,11 @@
 <#assign shortName = table.shortName>
 package ${basepackage}.dao;
 
-import com.ofweek.live.core.common.persistence.CrudDao;
-import com.ofweek.live.core.common.persistence.annotation.MyBatisDao;
+import com.yeahka.common.core.persistence.CrudDao;
+import org.apache.ibatis.annotations.Mapper;
 import ${basepackage}.entity.${className};
 
-/**
- * 
- * @author tangqian
- */
-@MyBatisDao
+@Mapper
 public interface ${className}Dao extends CrudDao<${className}> {
 	
 }
