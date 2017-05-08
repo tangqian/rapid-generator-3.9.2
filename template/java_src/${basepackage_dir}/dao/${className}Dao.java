@@ -4,10 +4,10 @@
 package ${basepackage}.dao;
 
 import com.yeahka.common.core.persistence.CrudDao;
-import org.apache.ibatis.annotations.Mapper;
+import com.yeahka.common.core.persistence.MyBatisDao;
 import ${basepackage}.entity.${className};
 
-@Mapper
+@MyBatisDao
 public interface ${className}Dao extends CrudDao<${className}> {
 	
 }

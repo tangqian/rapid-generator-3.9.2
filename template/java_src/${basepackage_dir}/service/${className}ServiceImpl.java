@@ -16,11 +16,5 @@ import ${basepackage}.entity.${className};
 @Service
 @Transactional(readOnly = true)
 public class ${className}ServiceImpl extends CrudService<${className}Dao, ${className}> {
-	
-	@Override
-	@Transactional(readOnly = false)
-	public void save(${className} entity) {
-		// To rewrite
-	}
     
 }
