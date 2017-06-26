@@ -15,7 +15,7 @@ public class GeneratorMain {
         GeneratorFacade g = new GeneratorFacade();
         
         g.deleteOutRootDir();   //删除生成器的输出目录
-              g.generateByTable("EXH_FILE_INFO","template");     //通过数据库表生成文件,template为模板的根目录
+              g.generateByTable("t_bank_unionpay_code","template");     //通过数据库表生成文件,template为模板的根目录
 
 //        g.generateByAllTable("template");       //自动搜索数据库中的所有表并生成文件,template为模板的根目录
 //              g.generateByClass(Blog.class,"template_clazz");

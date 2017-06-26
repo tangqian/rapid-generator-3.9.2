@@ -39,11 +39,11 @@
     <insert id="insert">
         insert into ${table.sqlName} (
         <#list table.columns as column>
-            ${column.sqlName}<#if column_has_next>,</#if>
+            <if test="${column.columnName} != null">,${column.sqlName}</if>
         </#list>
         ) values (
         <#list table.columns as column>
-            <@mapperEl column.columnName/><#if column_has_next>,</#if>
+            <if test="${column.columnName} != null">,<@mapperEl column.columnName/></if>
         </#list>
         )
     </insert>
