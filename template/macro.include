@@ -15,14 +15,14 @@
 	){
 	<#list table.compositeIdColumns as column>
 		<#if column.pk>
-		this.${column.columnNameLower} = ${column.columnNameLower};
+		this.${column.columnName} = ${column.columnNameLower};
 		</#if>
 	</#list>	
 	}
 
 </#macro>
 
-<#assign excludeColunmStr = ",xxxx,">
+<#assign excludeColunmStr = ",id,create_time,update_time,create_by,update_by,">
 
 <#macro generateBycondition columnSqlName>
 	<#assign compareName = "," + columnSqlName + ",">

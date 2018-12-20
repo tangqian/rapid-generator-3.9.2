@@ -8,7 +8,7 @@
 	</comment>
 	
 	<!-- 表示生成的java源文件所在的包路径，可在模板中引用该变量，请看template/java_src下的${basepackage_dir},多了_dir表示将.换成/代表多级目录 -->
-	<entry key="basepackage">com.yeahka.api.open.modules.sys</entry>
+	<entry key="basepackage">com.vivo.browsersearch.dal.browsersearch</entry>
 	
 	<!-- 自定义变量，可设置多个以被其它模板中引用。例如对用户表进行代码生成时，可以设置为用户，这样在新增或编辑页面时可引用该变量-->
 	<entry key="bussinessName">文件</entry>
@@ -25,8 +25,8 @@
 	<!--<entry key="jdbc.username">mysqluser</entry>
 	<entry key="jdbc.password">hello@openpos</entry>-->
 
-    <entry key="jdbc.username">webuser</entry>
-    <entry key="jdbc.password">lpmish</entry>
+    <entry key="jdbc.username">root</entry>
+    <entry key="jdbc.password">078c50</entry>
 		
 	<!-- oracle需要指定jdbc.schema,其它数据库忽略此项配置  -->
 	<entry key="jdbc.schema"></entry>
@@ -46,7 +46,8 @@
 	<!-- Mysql -->
 	<!--<entry key="jdbc.url">jdbc:mysql://192.168.10.107/tms?useUnicode=true&amp;characterEncoding=UTF-8</entry>-->
 	<!--<entry key="jdbc.url">jdbc:mysql://192.168.51.203/lepos_business?useUnicode=true&amp;characterEncoding=UTF-8</entry>-->
-	<entry key="jdbc.url">jdbc:mysql://192.168.51.155/lepos?useUnicode=true&amp;characterEncoding=UTF-8</entry>
+	<!--<entry key="jdbc.url">jdbc:mysql://192.168.2.118:3308/gamecenter?useUnicode=true&amp;characterEncoding=UTF-8</entry>-->
+	<entry key="jdbc.url">jdbc:mysql://10.101.81.208:3306/browsersearch_manager?useUnicode=true&amp;characterEncoding=UTF-8</entry>
 	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
 
 	<!-- Oracle 	jdbc:oracle:oci:@tnsname_devdb

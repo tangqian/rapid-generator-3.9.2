@@ -52,9 +52,9 @@ public class DatabaseDataTypesUtils {
 				&& decimalDigits == 0) {
 			if (size == 1) {
 				// https://sourceforge.net/tracker/?func=detail&atid=415993&aid=662953&group_id=36044
-				return "java.lang.Boolean";
+				return "java.lang.Short";
 			} else if (size < 3) {
-				return "java.lang.Byte";
+				return "java.lang.Short";
 			} else if (size < 5) {
 				return "java.lang.Short";
 			} else if (size < 10) {

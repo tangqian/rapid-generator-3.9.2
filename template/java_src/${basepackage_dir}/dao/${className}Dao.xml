@@ -10,7 +10,7 @@
         select
             *
         from ${table.sqlName}
-        where <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnName}"/><#if column_has_next>, </#if></#list>
+        where <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnNameLower}"/><#if column_has_next>, </#if></#list>
     </select>
 
     <select id="getBy" resultType="${className}">
@@ -18,11 +18,11 @@
             *
         from ${table.sqlName}
         where 1 = 1
-        <if test="FId != null">
-            and F_id = <@mapperEl "FId"/>
+        <if test="id != null">
+            and id = <@mapperEl "id"/>
         </if>
-        <if test="FName != null and FName != ''">
-            and F_name = <@mapperEl "FName"/>
+        <if test="name != null and name != ''">
+            and name = <@mapperEl "name"/>
         </if>
     </select>
 
@@ -31,19 +31,19 @@
             *
         from ${table.sqlName}
         where 1 = 1
-        <if test="FName != null and FName != ''">
-            and	IFNULL(F_name,'') like CONCAT('%', <@mapperEl "FName"/>, '%')
+        <if test="name != null and name != ''">
+            and	IFNULL(name,'') like CONCAT('%', <@mapperEl "name"/>, '%')
         </if>
     </select>
 
     <insert id="insert">
         insert into ${table.sqlName} (
         <#list table.columns as column>
-            <if test="${column.columnName} != null">,${column.sqlName}</if>
+            <if test="${column.columnNameLower} != null">,${column.sqlName}</if>
         </#list>
         ) values (
         <#list table.columns as column>
-            <if test="${column.columnName} != null">,<@mapperEl column.columnName/></if>
+            <if test="${column.columnNameLower} != null">,<@mapperEl column.columnNameLower/></if>
         </#list>
         )
     </insert>
@@ -52,16 +52,16 @@
         update ${table.sqlName}
         <set>
             <#list table.notPkColumns as column>
-            <if test="${column.columnName} != null">${column.sqlName} = <@mapperEl column.columnName/>,</if>
+            <if test="${column.columnNameLower} != null">${column.sqlName} = <@mapperEl column.columnNameLower/>,</if>
             </#list>
         </set>
         where
-            <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnName}"/><#if column_has_next>, </#if></#list>
+            <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnNameLower}"/><#if column_has_next>, </#if></#list>
     </update>
 
     <update id="delete">
         delete from ${table.sqlName}
-        where <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnName}"/><#if column_has_next>, </#if></#list>
+        where <#list table.pkColumns as column>${column.sqlName} = <@mapperEl "${column.columnNameLower}"/><#if column_has_next>, </#if></#list>
     </update>
 
 </mapper>

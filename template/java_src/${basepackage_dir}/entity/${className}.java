@@ -3,8 +3,9 @@
 <#assign classNameLower = className?uncap_first> 
 package ${basepackage}.entity;
 
-import com.yeahka.common.core.persistence.BaseEntity;
 import java.util.Date;
+
+import com.vivo.browsersearch.dal.common.BaseEntity;
 
 public class ${className} extends BaseEntity<${className}> {
 
@@ -12,7 +13,7 @@ public class ${className} extends BaseEntity<${className}> {
 	<#list table.columns as column>
 	<@generateBycondition column.sqlName>
 	
-	private ${column.simpleJavaType} ${column.columnName};
+	private ${column.simpleJavaType} ${column.columnNameLower};
 	</@generateBycondition>
 	</#list>
 
@@ -22,11 +23,11 @@ public class ${className} extends BaseEntity<${className}> {
 	<#list table.columns as column>
     <@generateBycondition column.sqlName>
 	public void set${column.columnName}(${column.simpleJavaType} value) {
-		this.${column.columnName} = value;
+		this.${column.columnNameLower} = value;
 	}
 	
 	public ${column.simpleJavaType} get${column.columnName}() {
-		return this.${column.columnName};
+		return this.${column.columnNameLower};
 	}
 	
 	</@generateBycondition>

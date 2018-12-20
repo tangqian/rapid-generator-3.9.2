@@ -4,17 +4,21 @@
 package ${basepackage}.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import com.yeahka.common.core.service.CrudService;
+
 import ${basepackage}.dao.${className}Dao;
 import ${basepackage}.entity.${className};
+import com.vivo.browsersearch.service.common.CrudService;
 
 /**
  * 
  * @author tangqian
  */
 @Service
-@Transactional(readOnly = true)
 public class ${className}ServiceImpl extends CrudService<${className}Dao, ${className}> {
+
+    @Override
+    public void save(${className} entity){
+
+    }
     
 }

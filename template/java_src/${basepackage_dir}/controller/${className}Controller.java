@@ -39,7 +39,7 @@ public class ${className}Controller extends BaseController {
     private static final String VIEW = "system/${classNameLower}/${classNameLower}_view";
     
     @Resource
-    private ${className}Service ${classNameLower}Service;
+    private ${className}ServiceImpl ${classNameLower}Service;
     
 	@RequestMapping
 	public ModelAndView page() {

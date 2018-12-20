@@ -156,12 +156,26 @@ public class GeneratorFacade {
         		return;
         	}
     		Generator g = getGenerator(templateRootDir);
-    		Table table = TableFactory.getInstance().getTable(tableName);
-    		try {
-    			processByTable(g,table,isDelete);
-    		}catch(GeneratorException ge) {
-    			PrintUtils.printExceptionsSumary(ge.getMessage(),getGenerator(templateRootDir).getOutRootDir(),ge.getExceptions());
-    		}
+            if (tableName.contains(",")) {
+                String[] tableNames = tableName.split(",");
+                List exceptions = new ArrayList();
+                for (String name : tableNames) {
+                    try {
+                        Table table = TableFactory.getInstance().getTable(name.trim());
+                        processByTable(g, table, isDelete);
+                    } catch (GeneratorException ge) {
+                        exceptions.addAll(ge.getExceptions());
+                    }
+                }
+                PrintUtils.printExceptionsSumary("", getGenerator(templateRootDir).getOutRootDir(), exceptions);
+            } else {
+                Table table = TableFactory.getInstance().getTable(tableName);
+                try {
+                    processByTable(g, table, isDelete);
+                } catch (GeneratorException ge) {
+                    PrintUtils.printExceptionsSumary(ge.getMessage(), getGenerator(templateRootDir).getOutRootDir(), ge.getExceptions());
+                }
+            }
     	}    
         
 		public void processByAllTable(String templateRootDir,boolean isDelete) throws Exception {

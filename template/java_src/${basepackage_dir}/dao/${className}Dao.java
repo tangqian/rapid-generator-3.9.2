@@ -3,11 +3,9 @@
 <#assign shortName = table.shortName>
 package ${basepackage}.dao;
 
-import com.yeahka.common.core.persistence.CrudDao;
-import com.yeahka.common.core.persistence.MyBatisDao;
 import ${basepackage}.entity.${className};
+import com.vivo.browsersearch.dal.common.CrudDao;
 
-@MyBatisDao
 public interface ${className}Dao extends CrudDao<${className}> {
 	
 }
